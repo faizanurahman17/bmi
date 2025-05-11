@@ -132,7 +132,7 @@ p{
 .range {
     -webkit-appearance: none;
     width: calc(100% - 200px);
-    height: 200px;
+    height: 100px;
     background: linear-gradient(90deg,red,#cc5c5c,#ffd000,orange,green,#ff7700,red);
     border-radius: 5px;
     border-top-left-radius: 100%;
