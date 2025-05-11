@@ -10,8 +10,9 @@ const inch = document.querySelector('.in');
 const cnvrt = document.querySelector('.cnvrt');
 const range = document.querySelector('.range');
 const shareLink = document.querySelector('.shareLink');
+const meters = document.querySelector('.meters');
 
-img.style.display = "none";
+meters.style.display = "none";
 
 calc.addEventListener('click', calcFn);
 cnvrt.addEventListener('click',cmCnvrtr);
@@ -19,7 +20,7 @@ shareLink.addEventListener('click',shareLinkFn);
 
 function calcFn() {
 
-    img.style.display = "block";
+    meters.style.display = "flex";
     range.style.transition = "all 0.25s 1s";
     
     value = weight.value * 10000/height.value ** 2;

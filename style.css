@@ -44,7 +44,7 @@ h1{
     color: #fff;
     padding: 0;
     font-size: 1.5rem;
-    /* font-weight: 900; */
+    font-weight: 100;
     box-shadow: inset #78bb9f -4px -4px 10px;
 }
 .share{
@@ -52,7 +52,6 @@ h1{
     height: 50px;
     padding: 0;
     font-size: 1rem;
-    font-weight: 100;
 }
 input{
     width: 100%;
