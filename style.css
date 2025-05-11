@@ -131,11 +131,11 @@ p{
 .range {
     -webkit-appearance: none;
     width: calc(100% - 200px);
-    height: 150px;
+    height: 200px;
     background: linear-gradient(90deg,red,#cc5c5c,#ffd000,orange,green,#ff7700,red);
     border-radius: 5px;
     border-top-left-radius: 100%;
-    border-top-right-radius: 1em;
+    border-top-right-radius: .5em;
     outline: none;
     padding: 0;
     border: 1px solid #ffffff;
@@ -146,11 +146,10 @@ p{
     -webkit-appearance: none;
     appearance: none;
     width: 5px;
-    height: 170px;
+    height: 200px;
     background: #000000;
     border-radius: 1em;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom: 0;
     cursor: pointer;
     border: 1px solid #ffffff;
     align-items: top;
