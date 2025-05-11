@@ -13,6 +13,7 @@ const shareLink = document.querySelector('.shareLink');
 const meters = document.querySelector('.meters');
 
 meters.style.display = "none";
+screen.style.display = "none";
 
 calc.addEventListener('click', calcFn);
 cnvrt.addEventListener('click',cmCnvrtr);
@@ -21,16 +22,22 @@ shareLink.addEventListener('click',shareLinkFn);
 function calcFn() {
 
     meters.style.display = "flex";
+    screen.style.display = "flex";
     range.style.transition = "all 0.25s 1s";
     
     value = weight.value * 10000/height.value ** 2;
     const result = value.toString().substring(0,4);
 
-    if (result < 16) {
-        screen.textContent = "BMI = " + result + " Sevear Underweight";
+    if (result < 13) {
+        screen.textContent = "BMI = " + result + " Dead";
+        screen.style.color = "red";
+        img.src = "./img/dead.jpg";
+        range.value = "6";
+    } else if (result < 16) {
+        screen.textContent = "BMI = " + result + " Severe Underweight";
         screen.style.color = "#cc5c5c";
         img.src = "./img/skinney.jpg";
-        range.value = "10";
+        range.value = "16";
     } else if (result < 18.5) {
         screen.textContent = "BMI = " + result + " Underweight";
         screen.style.color = "red";
@@ -52,7 +59,7 @@ function calcFn() {
         img.src = "./img/fit.jpg";
         range.value = "63";
     } else if (result < 30) {
-        screen.textContent = "BMI = " + result + " Sevear Overweight";
+        screen.textContent = "BMI = " + result + " Severe Overweight";
         screen.style.color = "orange";
         img.src = "./img/overweight.jpg";
         range.value = "75";
@@ -62,7 +69,7 @@ function calcFn() {
         img.src = "./img/obesity.jpg";
         range.value = "85";
     } else if (result > 33) {
-        screen.textContent = "BMI = " + result + " Sevear Obesity";
+        screen.textContent = "BMI = " + result + " Severe Obesity";
         screen.style.color = "red";
         img.src = "./img/fat.jpg";
         range.value = "95";
@@ -92,6 +99,7 @@ function cmCnvrtr() {
 }
 
 function shareLinkFn(e) {
+    screen.style.display = "flex";
     e.preventDefault();
 
     const screenDisplay = screen.textContent.trim() +" "+ weight.value.trim() +" "+ height.value.trim();

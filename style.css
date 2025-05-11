@@ -7,7 +7,8 @@ div,
 .height-in-cm,
 .inputs,
 .meters,
-.heading{
+.heading,
+.screen{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -44,8 +45,10 @@ h1{
     color: #fff;
     padding: 0;
     font-size: 1.5rem;
-    font-weight: 100;
-    box-shadow: inset #78bb9f -4px -4px 10px;
+    font-weight: 300;
+    box-shadow: inset #78bb9f -4px -4px 10px,
+                 #e8e8e8 4px 4px 10px;
+
 }
 .share{
     width: 70px;
@@ -67,8 +70,13 @@ p{
     font-size: 2rem;
 }
 .screen{
-    height: 50px;
+    height: 100px;
+    width: 100%;
+    align-items: center;
     transition: color .25s .1s;
+    box-shadow: #e8e8e8 4px 4px 10px;
+    border-radius: .5em;
+    /* border: 1px black solid; */
 }
 .convertor-cont{
     justify-content: space-between;
@@ -123,7 +131,7 @@ p{
     -webkit-appearance: none;
     width: calc(100% - 200px);
     height: 150px;
-    background: linear-gradient(90deg,#cc5c5c,#ffd000,orange,green,#ff7700,red);
+    background: linear-gradient(90deg,red,#cc5c5c,#ffd000,orange,green,#ff7700,red);
     border-radius: 5px;
     border-top-left-radius: 100%;
     border-top-right-radius: 1em;
@@ -146,11 +154,6 @@ p{
     cursor: pointer;
     border: 1px solid #ffffff;
     align-items: top;
-    margin-top: -20px;
     transition: all .5s .1s;
     box-shadow: #0000007a 4px -4px 10px;
-    animation: blink 1s linear infinite;
-}
-@keyframes blink {
-    from{opacity: 0;}to{opacity: 1;}
 }
