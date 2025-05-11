@@ -84,6 +84,8 @@ function calcFn() {
         screen.textContent = "Enter a valid number";
         screen.style.color = "red";
         img.style.display = "none";
+    } else {
+        img.style.display = "flex";
     }
 }
 
@@ -95,7 +97,7 @@ function cmCnvrtr() {
     lbValue = lbValue.toString().substring(0,6);
     cnvrtValue = cnvrtValue.toString().substring(0,6);
 
-    cmDisplay.textContent = lbValue + "kg " + cnvrtValue + "cm"; 
+    cmDisplay.textContent = lbValue.toString().substring(0,5) + "kg " + cnvrtValue.toString().substring(0,5) + "cm"; 
 }
 
 function shareLinkFn(e) {

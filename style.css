@@ -99,6 +99,7 @@ p{
 .inputs input{
     width: 60px;
     height: 100%;
+    padding: 5px;
 }
 .cnvrt{
     width: 150px!important;
