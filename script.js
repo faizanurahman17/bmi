@@ -25,36 +25,56 @@ function calcFn() {
     value = weight.value * 10000/height.value ** 2;
     const result = value.toString().substring(0,4);
 
-    if (result < 18.5) {
+    if (weight.value < 0 || height.value < 0) {
+        screen.textContent = "Enter a valid number";
+        screen.style.color = "red";
+        img.style.display = "none";
+    }
+
+    if (result < 16) {
+        screen.textContent = "BMI = " + result + " Sevear Underweight";
+        screen.style.color = "#cc5c5c";
+        img.src = "./img/skinney.jpg";
+        range.value = "10";
+    } else if (result < 18.5) {
         screen.textContent = "BMI = " + result + " Underweight";
         screen.style.color = "red";
         img.src = "./img/underweight.jpg";
-        range.value = "25";
+        range.value = "20";
+    } else if (result < 21.5) {
+        screen.textContent = "BMI = " + result + " Normal";
+        screen.style.color = "#ffd000";
+        img.src = "./img/50-5ft8.jpg"
+        range.value = "30";
     } else if (result < 25) {
         screen.textContent = "BMI = " + result + " Normal";
         screen.style.color = "green";
         img.src = "./img/normal.jpg";
         range.value = "55";
-    } else if (result < 30) {
+    } else if (result < 27.5) {
         screen.textContent = "BMI = " + result + " Overweight";
+        screen.style.color = "#498000";
+        img.src = "./img/fit.jpg";
+        range.value = "63";
+    } else if (result < 30) {
+        screen.textContent = "BMI = " + result + " Sevear Overweight";
         screen.style.color = "orange";
         img.src = "./img/overweight.jpg";
         range.value = "75";
-    } else if (result > 30) {
+    } else if (result < 33) {
         screen.textContent = "BMI = " + result + " Obesity";
-        screen.style.color = "red";
+        screen.style.color = "ff7700";
         img.src = "./img/obesity.jpg";
-        range.value = "100";
+        range.value = "85";
+    } else if (result > 33) {
+        screen.textContent = "BMI = " + result + " Sevear Obesity";
+        screen.style.color = "red";
+        img.src = "./img/fat.jpg";
+        range.value = "95";
     } else {
         screen.textContent = "Input is empty";
         screen.style.color = "";
         screen.style.color = "orange";
-        img.style.display = "none";
-    }
-
-    if (weight.value < 0 || height.value < 0) {
-        screen.textContent = "Enter a valid number";
-        screen.style.color = "red";
         img.style.display = "none";
     }
 }
