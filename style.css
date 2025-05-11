@@ -142,7 +142,6 @@ p{
     box-shadow: #0000003c 4px -4px 10px;
     overflow: hidden;
 }
-
 .range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
