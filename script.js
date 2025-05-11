@@ -25,12 +25,6 @@ function calcFn() {
     value = weight.value * 10000/height.value ** 2;
     const result = value.toString().substring(0,4);
 
-    if (weight.value < 0 || height.value < 0) {
-        screen.textContent = "Enter a valid number";
-        screen.style.color = "red";
-        img.style.display = "none";
-    }
-
     if (result < 16) {
         screen.textContent = "BMI = " + result + " Sevear Underweight";
         screen.style.color = "#cc5c5c";
@@ -75,6 +69,12 @@ function calcFn() {
         screen.textContent = "Input is empty";
         screen.style.color = "";
         screen.style.color = "orange";
+        img.style.display = "none";
+    }
+
+    if (weight.value < 0 || height.value < 0) {
+        screen.textContent = "Enter a valid number";
+        screen.style.color = "red";
         img.style.display = "none";
     }
 }
