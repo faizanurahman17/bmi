@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" href="/bmi/img/BMI.jpg" type="image/jpg">
     <title>BMI Scale</title>
 </head>
 <body>
     <section class="wrapper">
-        <label for="weight">Weight</label>
-        <input type="number" name="weight" id="weight" class="weight" placeholder="kg">
+        <div class="heading">
+            <img src="./img/BMI.jpg" alt="" class="logo">
+            <h1>BMI SCALE</h1>
+            <a href="https://wa.me/917631440087?text=hello" target="_blank" class="shareLink" target="_blank">
+                <input type="button" value="share" class="share">
+            </a>
+        </div>
+
+        <div class="weight-cont">
+            <label for="weight">Weight</label>
+            <input type="number" name="weight" id="weight" class="weight" placeholder="kg">
+        </div>
         
-        <label for="height">Height</label>
-        <input type="number" name="height" id="height" class="height" placeholder="cm">
+        <div class="height-cont">
+            <label for="height">Height</label>
+            <input type="number" name="height" id="height" class="height" placeholder="cm">
+        </div>
         
         <input type="button" class="calc" value="Calculate">
         <p class="screen"></p>
+
+        <div class="convertor-cont">
+            <label for="height-cnvrt" class="height-in-cm">0kg <br> 0cm</label>
+            <nav class="inputs">
+                <input type="number" class="lb" placeholder="lb">
+                <input type="number" id="height-cnvrt" class="ft" placeholder="ft">
+                <input type="number" id="height-cnvrt" class="in" placeholder="in">
+                <input type="button" class="cnvrt" value="Convert">
+            </nav>
+        </div>
+
+        <div class="meters">
+            <img class="img">
+            <input type="range" value="0" max="100" min="0" class="range">
+        </div>
+
     </section>
 
 
